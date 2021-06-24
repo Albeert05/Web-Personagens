@@ -149,8 +149,6 @@ h1{
     align-items: center;
     z-index: 1;
     user-select: none;
-    --scalet: ;
-    transform: scale();
 }
 .pers-card_background {
     position: absolute;
