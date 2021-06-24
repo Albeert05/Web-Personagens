@@ -132,8 +132,12 @@ h1{
 }
 
 .cards {
-    display: flex;
-    flex-wrap: wrap;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 70px 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 .pers-card {
@@ -145,7 +149,8 @@ h1{
     align-items: center;
     z-index: 1;
     user-select: none;
-    margin: 0 2rem;
+    --scalet: ;
+    transform: scale();
 }
 .pers-card_background {
     position: absolute;
