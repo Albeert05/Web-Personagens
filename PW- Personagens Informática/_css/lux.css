@@ -12,8 +12,14 @@ body{
 }
 
 /*Programação header*/
-.logo{
-    width: 200px;
+.logo {
+    width: 140px;
+    margin: 1rem 0 0 7rem;
+    transition: all 150ms ease-in-out;
+}
+
+.logo-h {
+    margin: 1rem 0 0 15%;
 }
 
 h1{
@@ -26,7 +32,7 @@ h1{
 #menu{
     width: 35px;
     height: 30px;
-    margin: 30px 0 20px 20px;
+    margin: 50px 0 20px 20px;
     cursor: pointer; 
 }
 
@@ -79,10 +85,11 @@ h1{
     z-index: 1;
     width: 0;
     height: 0;
-    margin: 30px 0 20px 20px;
-    background: radial-gradient(circle, #6B8E4E, #B2C5B2);
+    margin: 50px 0 20px 20px;
+    background: radial-gradient(circle, #6B8E4E, #0d4e0d);
     border-radius: 50%;
     transition: 0.3s ease;
+    position: absolute;
 }
 
 #menu-bar{
@@ -115,71 +122,62 @@ h1{
     display: block;
 }
 
-/*Programação Cards*/
-.main{
-    grid-area: card;
-    display: grid;
-    text-align: center;
-    justify-content: center;
-    margin: 80px auto;
-    grid-row-gap: 1em;
-}
+/*Cards*/
 
-.conteiner{
-    grid-area: conteiner;
-    display: grid;
-    text-align: center;
-    justify-content: center;
-    position: relative;
-    flex-wrap: wrap;
-    width: 1100px;
-}
-
-.conteiner .card{
-    position: relative;
-    max-width: 300px;
-    height: 215px;
-    margin: 30px 10px;
-    padding: 20px 15px;
+.cards-ad {
+    margin-top: 200px;
     display: flex;
-    flex-direction: column;
-    box-shadow: 0 5px 202px rgba(0,0,0,0.5);
-    transition: 0.3s ease-in-out;
+    align-items: center;
+    justify-content: center;
 }
 
-.conteiner .card:hover{
-    height: 420px;
+.cards {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.conteiner .card .imgBx{
-    position: relative;
+.pers-card {
     width: 260px;
     height: 260px;
-    top: -60px;
-    left: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     z-index: 1;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    user-select: none;
+    margin: 0 2rem;
+}
+.pers-card_background {
+    position: absolute;
+    transform: scale(2);
+    transition: all 250ms ease-in-out;
 }
 
-.conteiner .card .imgBx img{
-    max-width: 100%;
-    border-radius: 4px;
-}
-
-.conteiner .card .content{
-    position: relative;
-    margin-top: -140px;
-    padding: 10px 15px;
-    text-align: center;
-    color: #111;
-    visibility: hidden;
+.pers-card_info {
     opacity: 0;
-    transition: 0.3s ease-in-out;
+    transform: translateY(120px);
+    transition: all 250ms ease-in-out;
+    background: #2a1533e1;
+    padding: .7rem .3rem .7rem .6rem ;
+    border-radius: 3%;
 }
 
-.conteiner .card:hover .content{
-    visibility: visible;
+.pers-card_info h2 {
+    color: #8f5fa5;
+}
+
+.pers-card_info p {
+    color: #81a860;
+}
+
+.pers-card:hover .pers-card_background {
+    transform: translateY(-100px);
+    z-index: -1;
+    opacity: 80%;
+    filter: blur(1px);
+    transform: scale(1.8);
+}
+.pers-card:hover .pers-card_info {
     opacity: 1;
-    margin-top: -40px;
-    transition-delay: 0.3s;
+    transform: translateY(50px);
 }
