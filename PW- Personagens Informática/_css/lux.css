@@ -124,6 +124,10 @@ h1{
 
 /*Cards*/
 
+a:link {
+    text-decoration: none;
+}
+
 .cards-ad {
     margin-top: 200px;
     display: flex;
@@ -143,6 +147,7 @@ h1{
 .pers-card {
     width: 260px;
     height: 260px;
+    padding-top: 80px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
