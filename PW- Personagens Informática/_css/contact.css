@@ -20,6 +20,11 @@
     border: none;
     outline: none;
     font-size: 15px;
+    border-radius: 7px;
+    resize: none;
+}
+.input-login::placeholder {
+    font-family: sans-serif;
 }
 
 .buton-login{
